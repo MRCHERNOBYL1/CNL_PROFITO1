@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MR_CHERNOBYL</title>
+    
+
+    <meta name="description" content="پورتفولیوی مدرن MR_CHERNOBYL - تلفیق طراحی مینیمال و تکنولوژی پیشرفته">
+    <meta name="keywords" content="طراحی سایت, توسعه وب, برنامه‌نویس, پورتفولیو, MR_CHERNOBYL">
+    <meta name="author" content="MR_CHERNOBYL">
+    <meta name="theme-color" content="#2196F3">
+    
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="video-bg.css">
+    <link rel="stylesheet" href="music-player.css">
+    
+
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    
+
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+    <div class="video-bg-container">
+        <video autoplay muted loop playsinline id="bgVideo">
+            <source src="assests/vedio/v2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+
+    <nav class="nav" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#home" class="logo">
+                    <div class="logo-circle" style="background-image: url('assests/photo/P1.png')"></div>
+                    <div class="logo-text">CNL COMPANY</div>
+                </a>
+                
+                <div class="nav-links">
+                    <a href="#home" class="nav-link active">خانه</a>
+                    <a href="#about" class="nav-link">درباره من</a>
+                    <a href="#skills" class="nav-link">مهارت‌ها</a>
+                    <a href="#projects" class="nav-link">پروژه‌ها</a>
+                    <a href="#services" class="nav-link">خدمات</a>
+                    <a href="#contact" class="nav-link">تماس</a>
+                </div>
+                
+                <div class="nav-actions">
+                    <button class="btn btn-primary" id="contactBtn">
+                        <i class="fas fa-paper-plane"></i>
+                        تماس با من
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="music-toggle" id="musicToggle">
+        <i class="fas fa-music"></i>
+    </div>
+
+    <div class="music-player" id="musicPlayer">
+        <div class="player-header">
+            <h4> music player</h4>
+            <button class="close-player" id="closePlayer">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="now-playing">
+            <div class="album-art">
+                <i class="fas fa-music"></i>
+            </div>
+            <div class="song-info">
+                <h5 id="currentSongTitle">
+Song currently playing</h5>
+                <p id="currentSongArtist">Artist</p>
+            </div>
+        </div>
+        
+        <div class="player-controls">
+            <button class="control-btn" id="prevBtn">
+                <i class="fas fa-step-backward"></i>
+            </button>
+            <button class="control-btn play-btn" id="playBtn">
+                <i class="fas fa-play" id="playIcon"></i>
+            </button>
+            <button class="control-btn" id="nextBtn">
+                <i class="fas fa-step-forward"></i>
+            </button>
+        </div>
+        
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="time-info">
+                <span id="currentTime">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+        </div>
+        
+        <div class="playlist">
+            <div class="playlist-item active" data-index="0">
+                <div class="album-art">
+                    <i class="fas fa-headphones"></i>
+                </div>
+                <div>
+                    <h6>Vase-Zende-Bodane</h6>
+                    <p>free iran</p>
+                </div>
+            </div>
+            <div class="playlist-item" data-index="1">
+                <div class="album-art">
+                    <i class="fas fa-guitar"></i>
+                </div>
+                <div>
+                    <h6>
+Karaj Ra Langerud</h6>
+                    <p>Fadaei</p>
+                </div>
+            </div>
+            <div class="playlist-item" data-index="2">
+                <div class="album-art">
+                    <i class="fas fa-piano"></i>
+                </div>
+                <div>
+                    <h6>
+Barandaz</h6>
+                    <p>Reza Pishro</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <main>
+
+        <section id="home" class="hero">
+            <div class="hero-bg"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="hero-tag">
+                            <i class="fas fa-bolt"></i>
+                            MR_CHERNOBYL
+                        </div>
+                        <h1>به یاد کسانی که دیگر در بین ما نیستند </h1>
+                        <p>
+از طراحی و توسعه وب‌سایت‌های حرفه‌ای گرفته تا ساخت و بهینه‌سازی سرورهای گیم و مهندسی معکوس نرم‌افزارها،
+هر پروژه برای من فقط یک کار نیست — یک چالش برای ساخت چیزی بهتر از قبل است.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#projects" class="btn btn-primary">مشاهده کارها</a>
+                            <a href="#about" class="btn btn-outline">درباره من</a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-visual">
+                        <div class="visual-container">
+                            <div class="visual-image">
+                                <div class="floating-elements">
+                                    <div class="float-element float-1">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <div class="float-element float-2">
+                                        <i class="fas fa-palette"></i>
+                                    </div>
+                                    <div class="float-element float-3">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number">74+</div>
+                        <div class="stat-label">پروژه تکمیل شده</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">سال تجربه</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">84%</div>
+                        <div class="stat-label">رضایت مشتری</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="about" class="section about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">معرفی</span>
+                    <h2>درباره من</h2>
+                    <p>من چرنوبیل هستم، جایی که خلاقیت، تکنولوژی و دقت فنی به هم می‌رسند.</p>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+من MR_CHERNOBYL هستم؛ توسعه‌دهنده و طراح سیستم‌های دیجیتال با تمرکز روی عملکرد، امنیت و تجربه کاربری.
+
+🔹 طراحی و توسعه وب‌سایت‌های مدرن و اپلیکیشن‌های تحت وب
+🔹 برنامه‌نویسی Full-Stack (فرانت‌اند و بک‌اند)
+🔹 طراحی رابط کاربری (UI) و بهینه‌سازی تجربه کاربری (UX)
+🔹 ساخت، کانفیگ و بهینه‌سازی سرورهای گیم
+🔹 توسعه ابزارها و سیستم‌های اختصاصی برای مدیریت سرورها
+🔹 مهندسی معکوس و تحلیل ساختار نرم‌افزارها
+🔹 افزایش سرعت، امنیت و پایداری پروژه‌های آنلاین
+🔹 طراحی سیستم‌های مقیاس‌پذیر برای رشد در آینده
+
+من فقط کد نمی‌زنم؛
+سیستم می‌سازم، تجربه خلق می‌کنم و ایده‌ها را به واقعیت تبدیل می‌کنم.
+                        </p>
+                        <p>
+باور دارم تکنولوژی زمانی ارزشمند است که زندگی کاربر را ساده‌تر کند، نه پیچیده‌تر.
+برای من توسعه فقط نوشتن کد نیست؛ ساختن تجربه‌ای روان، سریع و قابل اعتماد است.
+
+در هر پروژه به جزئیات اهمیت می‌دهم؛
+از ساختار فنی و امنیت گرفته تا حس و حالی که کاربر هنگام استفاده دریافت می‌کند.
+
+هدف من ارائه راهکارهایی‌ست که فقط کار نکنند،
+بلکه درست، بهینه و ماندگار کار کنند.
+                        </p>
+                    </div>
+                    
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="skill-text">
+                                <h4>طراحی توسعه گیم سرور</h4>
+                                <p></p>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="skill-text">
+                                <h4>طراحی سایت با بهترین کیفیت</h4>
+                                <p></p>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <div class="skill-text">
+                                <h4>طراحی UI/UX</h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">تخصص‌ها</span>
+                    <h2>مهارت‌های فنی</h2>
+                    <p>تکنولوژی‌هایی که در آن‌ها تخصص دارم</p>
+                </div>
+                
+                <div class="skills-grid">
+
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Developer game</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>lua</span>
+                                    <span class="skill-percent">98%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>html.css</span>
+                                    <span class="skill-percent">100%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>3d modeler</span>
+                                    <span class="skill-percent">49%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <h3>Backend Development</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Node.js</span>
+                                    <span class="skill-percent">92%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 92%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Python</span>
+                                    <span class="skill-percent">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Database Design</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="projects" class="section projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">کارهای منتخب</span>
+                    <h2>پروژه‌های اخیر</h2>
+                    <p>نمونه‌هایی از بهترین کارهایی که انجام داده‌ام</p>
+                </div>
+                
+                <div class="projects-grid">
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-tag">Vmp cheat</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tech">
+                                <span class="tech-badge"></span>
+                                <span class="tech-badge"></span>
+                                <span class="tech-badge"></span>
+                            </div>
+                            <h3 class="project-title">طراحی و توسعه ابزار تقلب برای لانچر ایرانی</h3>
+                            <p class="project-desc">
+                                طراحی ابزار برای تقلب در سرور های جی تی ای انلاین با بهترین کیفیت و کوالیتی 
+                            </p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-eye"></i> دیسکورد
+                                </a>
+                                <a href="https://github.com/MRCHERNOBYL1" class="project-link">
+                                    <i class="fab fa-github"></i> گیت هاب
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-tag">اپلیکیشن موبایل</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tech">
+                                <span class="tech-badge"></span>
+                                <span class="tech-badge"></span>
+                                <span class="tech-badge"></span>
+                            </div>
+                            <h3 class="project-title">اپلیکیشن فیتنس</h3>
+                            <p class="project-desc">
+                                اپلیکیشن ورزشی با قابلیت ردیابی پیشرفت و برنامه تمرینی شخصی
+                            </p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-eye"></i> مشاهده
+                                </a>
+                                <a href="https://github.com/MRCHERNOBYL1" class="project-link">
+                                    <i class="fab fa-github"></i> گیت هاب
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-tag">طراحی UI/UX</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tech">
+                                <span class="tech-badge">Figma</span>
+                                <span class="tech-badge">Prototyping</span>
+                                <span class="tech-badge">Design System</span>
+                            </div>
+                            <h3 class="project-title">سیستم طراحی یکپارچه</h3>
+                            <p class="project-desc">
+                                ایجاد Design System کامل برای استارتاپ با بیش از ۱۰۰ کامپوننت
+                            </p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-eye"></i> مشاهده
+                                </a>
+                                <a href="https://github.com/MRCHERNOBYL1" class="project-link">
+                                    <i class="fab fa-figma"></i> گیت هاب
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="services" class="section services">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">چه کارهایی می‌کنم</span>
+                    <h2>خدمات من</h2>
+                    <p>تخصص‌های اصلی من در زمینه طراحی و توسعه</p>
+                </div>
+                
+                <div class="services-grid">
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>توسعه وبسایت</h3>
+                        <p>
+                            طراحی و توسعه وبسایت‌های مدرن، ریسپانسیو و با عملکرد بالا
+                        </p>
+                    </div>
+                    
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>اپلیکیشن موبایل</h3>
+                        <p>
+                            ساخت اپلیکیشن‌های iOS و Android با بهترین تجربه کاربری
+                        </p>
+                    </div>
+                    
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3>طراحی UI/UX</h3>
+                        <p>
+                            طراحی رابط کاربری زیبا و تجربه کاربری منحصر به فرد
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contact" class="section contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">با من در تماس باشید</span>
+                    <h2>تماس با من</h2>
+                    <p>برای شروع پروژه جدید یا همکاری با من</p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3>ایمیل</h3>
+                                <p>pahlavionmtop123@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h3>دیسکورد</h3>
+                                <p>pahlavi.__.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3>آدرس</h3>
+                                <p>تهران، ایران</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label class="form-label" for="name">نام و نام خانوادگی</label>
+                                <input type="text" id="name" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="email">آدرس ایمیل</label>
+                                <input type="email" id="email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="message">پیام شما</label>
+                                <textarea id="message" class="form-control" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                ارسال پیام
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <a href="#home" class="logo">
+                        <div class="logo-circle">C</div>
+                        <div class="logo-text">CHERNOBYL</div>
+                    </a>
+                    <p class="footer-description">
+                        تبدیل ایده‌های خلاقانه به پروژه‌های دیجیتال موفق
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>لینک‌های سریع</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">خانه</a></li>
+                        <li><a href="#about">درباره من</a></li>
+                        <li><a href="#skills">مهارت‌ها</a></li>
+                        <li><a href="#projects">پروژه‌ها</a></li>
+                        <li><a href="#services">خدمات</a></li>
+                        <li><a href="#contact">تماس</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>خدمات</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">توسعه وبسایت</a></li>
+                        <li><a href="#services">اپلیکیشن موبایل</a></li>
+                        <li><a href="#services">طراحی UI/UX</a></li>
+                        <li><a href="#services">مشاوره فنی</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© ۲۰۲۴ تمام حقوق محفوظ است. ساخته شده با ❤️ توسط MR_CHERNOBYL</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+    <script src="music-player.js"></script>
+</body>
+</html>

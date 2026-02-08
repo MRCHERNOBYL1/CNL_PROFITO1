@@ -89,3 +89,6 @@ Freedom will rise.
 
 ## About the Developer
 Developed with a belief that great design is not only about beauty, but also about responsibility, identity, and meaningful impact.
+
+
+
